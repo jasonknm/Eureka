@@ -18,6 +18,7 @@
 		28C777251BA14A52000ED936 /* Eureka.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 51729E471B9A5841004A00EB /* Eureka.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		28CD97C21BB32F0E00AFDA67 /* EurekaSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28CD97C01BB32F0E00AFDA67 /* EurekaSectionHeader.xib */; };
 		28E8554C1B9EA46F004E5189 /* FieldRowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E8554A1B9EA400004E5189 /* FieldRowUITests.swift */; };
+		333EE4202E016A28004AB006 /* RiderSearchPushRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333EE41F2E016A28004AB006 /* RiderSearchPushRow.swift */; };
 		51729E1E1B9A54F1004A00EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51729E1D1B9A54F1004A00EB /* AppDelegate.swift */; };
 		51729E201B9A54F1004A00EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51729E1F1B9A54F1004A00EB /* ViewController.swift */; };
 		51729E231B9A54F1004A00EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51729E211B9A54F1004A00EB /* Main.storyboard */; };
@@ -105,6 +106,7 @@
 		287A143E1D99A96100FFE6EB /* ImageRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageRow.swift; path = Example/CustomRows/ImageRow/ImageRow.swift; sourceTree = "<group>"; };
 		28CD97C11BB32F0E00AFDA67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Example/Base.lproj/EurekaSectionHeader.xib; sourceTree = "<group>"; };
 		28E8554A1B9EA400004E5189 /* FieldRowUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FieldRowUITests.swift; path = Example/UITests/FieldRowUITests.swift; sourceTree = SOURCE_ROOT; };
+		333EE41F2E016A28004AB006 /* RiderSearchPushRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiderSearchPushRow.swift; sourceTree = "<group>"; };
 		51729E1A1B9A54F1004A00EB /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51729E1D1B9A54F1004A00EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Example/AppDelegate.swift; sourceTree = "<group>"; };
 		51729E1F1B9A54F1004A00EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = ViewController.swift; path = Example/ViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -263,6 +265,7 @@
 				51729E6F1B9A660A004A00EB /* WeekDaysCell.xib */,
 				D4ACF9122074B52200AEA952 /* EmojiCell.xib */,
 				51729E6D1B9A6601004A00EB /* CustomCells.swift */,
+				333EE41F2E016A28004AB006 /* RiderSearchPushRow.swift */,
 			);
 			name = "Custom Row and Cell";
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				8F325051205AAB35006AF0A6 /* CustomCellsViewController.swift in Sources */,
 				8F325067205AAD7A006AF0A6 /* MultivaluedExamples.swift in Sources */,
 				8F325061205AACB9006AF0A6 /* ListSectionsController.swift in Sources */,
+				333EE4202E016A28004AB006 /* RiderSearchPushRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,12 +634,26 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Example/Example/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xmartlabs.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_UPCOMING_FEATURE_CONCISE_MAGIC_FILE = YES;
+				SWIFT_UPCOMING_FEATURE_DEPRECATE_APPLICATION_MAIN = YES;
+				SWIFT_UPCOMING_FEATURE_DISABLE_OUTWARD_ACTOR_ISOLATION = YES;
+				SWIFT_UPCOMING_FEATURE_DYNAMIC_ACTOR_ISOLATION = YES;
+				SWIFT_UPCOMING_FEATURE_FORWARD_TRAILING_CLOSURES = YES;
+				SWIFT_UPCOMING_FEATURE_GLOBAL_ACTOR_ISOLATED_TYPES_USABILITY = YES;
+				SWIFT_UPCOMING_FEATURE_GLOBAL_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_IMPLICIT_OPEN_EXISTENTIALS = YES;
+				SWIFT_UPCOMING_FEATURE_IMPORT_OBJC_FORWARD_DECLS = YES;
+				SWIFT_UPCOMING_FEATURE_INFER_SENDABLE_FROM_CAPTURES = YES;
+				SWIFT_UPCOMING_FEATURE_ISOLATED_DEFAULT_VALUES = YES;
+				SWIFT_UPCOMING_FEATURE_NONFROZEN_ENUM_EXHAUSTIVITY = YES;
+				SWIFT_UPCOMING_FEATURE_REGION_BASED_ISOLATION = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -651,12 +669,26 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Example/Example/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xmartlabs.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_UPCOMING_FEATURE_CONCISE_MAGIC_FILE = YES;
+				SWIFT_UPCOMING_FEATURE_DEPRECATE_APPLICATION_MAIN = YES;
+				SWIFT_UPCOMING_FEATURE_DISABLE_OUTWARD_ACTOR_ISOLATION = YES;
+				SWIFT_UPCOMING_FEATURE_DYNAMIC_ACTOR_ISOLATION = YES;
+				SWIFT_UPCOMING_FEATURE_FORWARD_TRAILING_CLOSURES = YES;
+				SWIFT_UPCOMING_FEATURE_GLOBAL_ACTOR_ISOLATED_TYPES_USABILITY = YES;
+				SWIFT_UPCOMING_FEATURE_GLOBAL_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_IMPLICIT_OPEN_EXISTENTIALS = YES;
+				SWIFT_UPCOMING_FEATURE_IMPORT_OBJC_FORWARD_DECLS = YES;
+				SWIFT_UPCOMING_FEATURE_INFER_SENDABLE_FROM_CAPTURES = YES;
+				SWIFT_UPCOMING_FEATURE_ISOLATED_DEFAULT_VALUES = YES;
+				SWIFT_UPCOMING_FEATURE_NONFROZEN_ENUM_EXHAUSTIVITY = YES;
+				SWIFT_UPCOMING_FEATURE_REGION_BASED_ISOLATION = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

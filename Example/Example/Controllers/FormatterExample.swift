@@ -70,7 +70,7 @@ class FormatterExample : FormViewController {
         }
     }
 
-    class CurrencyFormatter : NumberFormatter, FormatterProtocol {
+  class CurrencyFormatter : NumberFormatter, FormatterProtocol, @unchecked Sendable {
         override func getObjectValue(_ obj: AutoreleasingUnsafeMutablePointer<AnyObject?>?, for string: String, range rangep: UnsafeMutablePointer<NSRange>?) throws {
             guard obj != nil else { return }
             var str = string.components(separatedBy: CharacterSet.decimalDigits.inverted).joined(separator: "")

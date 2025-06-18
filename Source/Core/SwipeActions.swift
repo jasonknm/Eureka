@@ -19,7 +19,7 @@ public class SwipeAction: ContextualAction {
     public var image: UIImage?
     public var title: String?
 
-    @available (*, deprecated, message: "Use actionBackgroundColor instead")
+    @available(*, deprecated, message: "Use actionBackgroundColor instead")
     public var backgroundColor: UIColor? {
         get { return actionBackgroundColor }
         set { self.actionBackgroundColor = newValue }

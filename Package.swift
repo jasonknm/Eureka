@@ -1,9 +1,9 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.10
 import PackageDescription
 
 let package = Package(
     name: "Eureka",
-    platforms: [.iOS(.v9)],
+    platforms: [.iOS(.v15)],
     products: [
         .library(name: "Eureka", targets: ["Eureka"])
     ],

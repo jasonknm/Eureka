@@ -23,30 +23,30 @@
 // THE SOFTWARE.
 
 import Foundation
+import UIKit
 import Eureka
 
 /// Selector Controller used to pick an image
-open class ImagePickerController : UIImagePickerController, TypedRowControllerType, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    /// The row that pushed or presented this controller
-    public var row: RowOf<UIImage>!
-    
-    /// A closure to be called when the controller disappears.
-    public var onDismissCallback : ((UIViewController) -> ())?
-    
-    open override func viewDidLoad() {
-        super.viewDidLoad()
-        delegate = self
-    }
+@MainActor
+class ImagePickerController: UIImagePickerController, @preconcurrency TypedRowControllerType, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+  /// The row that pushed or presented this controller
+  var row: RowOf<UIImage>!
 
-    open func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        (row as? ImageRow)?.imageURL = info[.referenceURL] as? URL
-        row.value = info[.originalImage] as? UIImage
-        onDismissCallback?(self)
-    }
-    
-    open func imagePickerControllerDidCancel(_ picker: UIImagePickerController){
-        onDismissCallback?(self)
-    }
+  /// A closure to be called when the controller disappears.
+  var onDismissCallback: ((UIViewController) -> ())?
+
+  open override func viewDidLoad() {
+    super.viewDidLoad()
+    delegate = self
+  }
+
+  open func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+    (row as? ImageRow)?.imageURL = info[UIImagePickerController.InfoKey.imageURL] as? URL // info[.referenceURL] as? URL
+    row.value = info[.originalImage] as? UIImage
+    onDismissCallback?(self)
+  }
+
+  open func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+    onDismissCallback?(self)
+  }
 }
-

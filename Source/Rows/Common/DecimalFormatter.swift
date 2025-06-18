@@ -26,7 +26,7 @@ import Foundation
 import UIKit
 
 /// A custom formatter for numbers with two digits after the decimal mark
-open class DecimalFormatter: NumberFormatter, FormatterProtocol {
+open class DecimalFormatter: NumberFormatter, FormatterProtocol, @unchecked Sendable {
 
     /// Creates the formatter with 2 Fraction Digits, Locale set to .current and .decimal NumberFormatter.Style
     public override init() {
